@@ -1,0 +1,75 @@
+.slider__inner {
+    height: 768px;
+    overflow: hidden;
+}
+
+.slider input[type="radio"] {
+    display: none;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider-list {
+    height: 2304px;
+    transition: transform 0.7s ease-in-out;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 370px;
+    left: 934px;
+    transform: rotate(90deg);
+    z-index: 10;
+    
+}
+
+.slider-controls label {
+    display: inline-block;
+    
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    border-radius: 50%;
+
+    background-color: #ffffff;
+    cursor: pointer;
+
+    transition: background-color 0.7s ease;
+
+    &:hover {
+        background-color: #d88d42;
+    }
+
+    
+}
+
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"] {
+    background-color: #f78b1f;
+}
+
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+    background-color: #f78b1f;
+
+
+}
+
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background-color: #f78b1f;
+}
+
+.no-js #btn-1:checked ~ .slider__inner .slider-list {
+    transform: translateY(0);
+}
+
+.no-js #btn-2:checked ~ .slider__inner .slider-list {
+    transform: translateY(-768px);
+}
+
+.no-js #btn-3:checked ~ .slider__inner .slider-list {
+    transform: translateY(-1536px);
+}
+
+
